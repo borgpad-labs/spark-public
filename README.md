@@ -1,105 +1,169 @@
-# ⚡ Spark-It
+# Spark
 
-> **Fuel the casino. Fund the future.**
-
-Spark turns every idea into a token. Trading fees go into a dedicated DAO. Token holders vote on how the funds are used to bring the idea to life.
+> **The Idea LaunchPad** — fund ideas before teams exist, then let the market select the best builders via futarchy on Realms.
 
 [![Built on Solana](https://img.shields.io/badge/Built%20on-Solana-14F195?logo=solana&logoColor=white)](https://solana.com)
+[![Realms DAO](https://img.shields.io/badge/Realms-DAO%20Governance-blueviolet)](https://realms.today)
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
 [![TypeScript](https://img.shields.io/badge/TypeScript-007ACC?logo=typescript&logoColor=white)](https://www.typescriptlang.org/)
 [![React](https://img.shields.io/badge/React-20232A?logo=react&logoColor=61DAFB)](https://reactjs.org/)
 
-## 🎯 TL;DR — What is Spark?
+---
 
-Spark is a revolutionary platform that transforms ideas into tradable tokens with built-in governance. Here's how it works:
+## Graveyard Hackathon Submission
 
-1. **Anyone posts an idea** on Twitter by tagging the official Spark account
-2. **Spark automatically creates a token** for that idea
-3. **The token trades in permissionless pools** with dynamic bonding curves
-4. **Trading fees are split**: 50% to the idea's DAO treasury, 50% to Spark DAO
-5. **Token holders vote** on how to use the treasury to build the idea
-6. **The more belief + trading, the bigger the treasury** — and the higher chance the idea gets built
+**Hackathon:** [Solana Graveyard Hack](https://solana.com/graveyard-hack)
 
-## 🧩 The Problem — Why Spark?
+**Sponsor Track:** Realms — DAOs ($5,000)
 
-Today's innovation landscape is broken:
+**Deployed app:** [justspark.fun/ideas](https://justspark.fun/ideas)
 
-- **Great ideas die quietly** — posted on Twitter, shared in DMs, pitched at hackathons, but most never get funding
-- **No way to bet on ideas early** without a full team, product, or roadmap
-- **Speculation dominates crypto** but rarely builds anything useful
-- **Communities want to contribute** but have no way to align money with intention at the idea stage
-- **Most funding models only empower the builder** — once they get money or sell tokens, they're no longer incentivized to deliver
+**First funded idea (hackathon live):** [OpenClaw Instances for Investors](https://justspark.fun/ideas/openclaw-instances-for-investors)
 
-### Spark changes that.
+**Links:** [X](https://x.com/sparkdotfun) | [Telegram](https://t.me/sparkdotfun) | [Documentation](https://justspark.notion.site/spark-doc-public)
 
-- **Tokenizing ideas** gives people a way to support them instantly
-- **Trading volume = fuel** — the more interest and trading, the more the DAO earns
-- **Holders = decision-makers** — they vote how funds are used, making the vision a shared mission
+**Team:** Mathis (Founder/Strategy) | Ewan (CTO/Solana) | Emere (Marketing/Community)
 
-## 🛠 How It Works
+**Contact:** @mathis_btc (Telegram)
 
-### 1. Idea Submission
-Anyone can submit an idea by tagging the official Spark account on Twitter. The platform automatically detects and processes these submissions.
+---
 
-### 2. Token Creation
-Spark automatically creates an SPL token for each idea with:
-- **Dynamic bonding curve** for fair price discovery
-- **Permissionless trading** on Meteora DEX
-- **Built-in governance** through Solana DAOs
+## What is Spark?
 
-### 3. Trading & Fee Collection
-- **2% trading fees** are collected on every transaction
-- **Fee split**: 50% to the idea's DAO treasury, 50% to Spark DAO
-- **Real-time market data** from Jupiter, DexScreener, and Birdeye
+Spark is an Idea LaunchPad on Solana. We tokenize ideas before teams exist — anyone can submit an idea, and the community funds it — then we mint Ownership Coins inspired by MetaDAO. These are treasury-backed tokens where 80% of raised funds go into the treasury, 20% into the AMM pool. Once an idea is funded, builders compete to execute it through a hackathon, and futarchy-powered decision markets select the best team.
 
-### 4. DAO Governance
-Once a project "graduates" (reaches certain milestones), a dedicated DAO is created where token holders can:
-- **Vote on proposals** for how to use the treasury
-- **Fund builders and developers** through application system
-- **Support marketing and community growth**
-- **Reward contributors**
-- **Burn tokens** to reduce supply
+**Our thesis:** AI has commoditized execution. Code is no longer the bottleneck — ideas, early conviction and distribution are. Vibecoder = 1% of the population. But 99% can VibeFund. Spark connects both sides.
 
-### 5. Builder Marketplace
-- **Developers can apply** to build specific proposals
-- **GitHub integration** for reputation and skill verification
-- **Transparent pricing** and project scope
-- **Community voting** on builder selection
+### How it works
 
-## 🌐 Who Is It For?
+1. **Anyone submits an idea** on Twitter by tagging the official Spark account
+2. **Spark creates an SPL token** for that idea with dynamic bonding curves on Meteora
+3. **Community funds the idea** with USDC deposits into an on-chain vault
+4. **A Realms DAO is created** for the funded idea — token holders govern the treasury
+5. **Builders compete** through hackathons, selected via futarchy decision markets
+6. **Treasury funds the winner** — governed entirely on-chain through Realms
 
-### 🚀 **Dreamers**
-People with bold ideas but no funding. Spark gives you a platform to share your vision and get community backing.
+---
 
-### 🎰 **Degens** 
-Who want to speculate, but **on creation**. Trade tokens representing real ideas and participate in their success.
+## How we use Realms
 
-### 👷 **Builders**
-Looking for a signal to build what people actually want. The marketplace connects you with funded projects and communities.
+Each funded idea on Spark deploys its treasury into a **Realms DAO** ([spl-governance](https://github.com/solana-labs/solana-program-library/tree/master/governance)). We migrated from Squads to Realms specifically for this hackathon in partnership with [combinator.trade](https://combinator.trade).
 
-## 🏗️ Architecture
+### Governance for Builders
 
-### Frontend
-- **React + TypeScript** with modern UI/UX
-- **Tailwind CSS** for styling
-- **Privy** for wallet authentication
-- **Jupiter SDK** for token swaps
-- **Real-time data** from multiple sources
+Idea/Ownership Coin holders govern their idea's treasury through Realms. Proposals include builder selection, milestone approvals, and fund allocation — all on-chain.
 
-### Backend
-- **Cloudflare Pages Functions** for serverless APIs
-- **D1 Database** for data persistence
-- **Solana Web3.js** for blockchain interactions
-- **Meteora SDK** for DEX operations
-- **Governance SDK** for DAO management
+### Futarchy via Realms Extensions
 
-### Smart Contracts
-- **Anchor Framework** for Solana programs
-- **SPL Token** for token creation
-- **Solana Governance** for DAO functionality
-- **Dynamic Bonding Curves** for fair pricing
+In collaboration with [combinator.trade](https://combinator.trade), we integrated futarchy-based decision markets on top of Realms. When builders apply to ship a funded idea, a decision market opens where participants predict the best team. The market resolves and the treasury is allocated to the winner — governed through Realms authority.
 
-## 🚀 Getting Started
+### Authority-First Orgs
+
+Every funded idea creates a strong on-chain organization. The treasury is 100% redeemable by token holders if no suitable builder is selected. Each Realms DAO is an authority-first entity where community funds are protected by design.
+
+### Realms integration in the codebase
+
+| What | Where | Description |
+|------|-------|-------------|
+| DAO creation | [`frontend/functions/api/createdao.ts`](frontend/functions/api/createdao.ts) | Creates a Realms DAO with governance, community token mint, and native treasury for each funded idea |
+| Multi-sig DAO creation | [`frontend/functions/api/createdaomultisig.ts`](frontend/functions/api/createdaomultisig.ts) | Multi-signature variant for DAO creation |
+| DAO data fetching | [`frontend/functions/api/getdao.ts`](frontend/functions/api/getdao.ts) | Retrieves Realm info, governance accounts, proposals, and voting config |
+| Governance data | [`frontend/functions/api/getgovernancedata.ts`](frontend/functions/api/getgovernancedata.ts) | Fetches user voting power and governance token records |
+| Governance service | [`frontend/src/services/governanceService.ts`](frontend/src/services/governanceService.ts) | Full governance operations: deposit tokens, cast votes (binary + multi-choice), withdraw, relinquish votes |
+| Governance UI | [`frontend/src/components/GovernanceStatus/`](frontend/src/components/GovernanceStatus/) | Token deposit/withdrawal and voting power display |
+| Proposal voting UI | [`frontend/src/components/ProposalVoting/`](frontend/src/components/ProposalVoting/) | Cast votes on proposals with multi-choice support |
+| Graduation check | [`frontend/functions/api/admin/gettokengraduate.ts`](frontend/functions/api/admin/gettokengraduate.ts) | Checks if a token qualifies for DAO creation |
+| DAO scheduler | [`workers/schedulerCreateDao/`](workers/schedulerCreateDao/) | Automated DAO creation for graduated tokens |
+| Data models | [`frontend/shared/models.ts`](frontend/shared/models.ts) | `DaoModel`, `DaoGovernanceModel`, `DaoProposalModel`, `DaoProposalState` |
+
+---
+
+## Solana Smart Contracts
+
+### Spark Idea Vault (Anchor)
+
+**Program ID:** `8ijFSYEJ7dCWSGVbLs7nVntbbmaz1tXYtkBGpn5JSNep`
+
+**Source:** [`onchain/programs/spark_idea_vault/src/lib.rs`](onchain/programs/spark_idea_vault/src/lib.rs)
+
+Custom Anchor program for USDC-denominated idea funding with on-chain vaults.
+
+| Instruction | Description |
+|-------------|-------------|
+| `initialize_admin_config` | One-time setup of the singleton admin account and pause flag |
+| `update_admin` | Transfer admin role to a new address |
+| `toggle_pause` | Pause/unpause all deposits and withdrawals |
+| `initialize_vault` | Create a new vault for an idea (PDA seeded by SHA256 of idea_id) |
+| `deposit` | Users deposit USDC into a vault (min 0.001 USDC, check-effects-interactions pattern) |
+| `withdraw` | Users withdraw their deposited USDC |
+| `admin_withdraw` | Admin withdraws all vault funds to the Realms DAO treasury |
+
+**Account structures:**
+- `AdminConfig` — singleton admin config (admin pubkey, pause flag, bump)
+- `IdeaVault` — one per idea (idea_id, vault_seed, mint, vault_ata, total_deposited)
+- `UserDeposit` — tracks per-user deposits (vault, user, amount)
+
+**Client integration:** [`frontend/shared/solana/sparkVaultService.ts`](frontend/shared/solana/sparkVaultService.ts)
+
+### Solana Governance (spl-governance) — Realms
+
+**Program ID:** `GovER5Lthms3bLBqWub97yVrMmEogzX7xNjdXpPPCVZw`
+
+Standard Solana governance program used for all Realms DAO operations (proposal creation, voting, treasury management).
+
+### Other on-chain integrations
+
+| Program | Usage |
+|---------|-------|
+| **Meteora DAMM v2** | Dynamic bonding curves for token trading pools |
+| **Jupiter** | Swap aggregation for token trades |
+| **SPL Token** | Token creation and transfers |
+| **Metaplex Token Metadata** | Token metadata (name, symbol, image) |
+
+---
+
+## What's live today
+
+- Platform at [justspark.fun/ideas](https://justspark.fun/ideas) with idea submission and USDC deposits
+- AI-powered idea analysis (market size, competition, feasibility)
+- First idea funded by the community with hackathon in progress
+- Realms DAO treasury integration
+- CombinatorFed decision market integration for builder selection
+- MCP server for AI agent integration ([`mcp-server/`](mcp-server/))
+
+---
+
+## Architecture
+
+```
+spark-it/
+├── frontend/              # React + TypeScript frontend
+│   ├── src/               # UI components, pages, services
+│   ├── functions/         # Cloudflare Pages Functions (serverless API)
+│   ├── shared/            # Shared types, Solana services, constants
+│   └── migrations/        # D1 database migrations
+├── onchain/               # Solana smart contracts (Anchor)
+│   ├── programs/          # Spark Idea Vault program (Rust)
+│   ├── client/            # TypeScript client for the program
+│   └── tests/             # On-chain tests
+├── mcp-server/            # MCP server for AI agents
+├── workers/               # Cloudflare Workers (schedulers)
+│   ├── schedulerCreateDao/          # Auto DAO creation
+│   ├── schedulerClaimFees/          # Fee collection
+│   └── schedulerRefreshTwitterStats/ # Twitter data refresh
+└── docs/                  # Technical documentation
+```
+
+### Tech stack
+
+- **Frontend:** React, TypeScript, Vite, Tailwind CSS, Privy auth
+- **Backend:** Cloudflare Pages Functions, D1 Database, R2 Storage
+- **Blockchain:** Solana, Anchor Framework, spl-governance (Realms), Meteora SDK, Jupiter SDK
+- **AI:** OpenAI + Gemini for idea analysis, MCP server for agent tooling
+
+---
+
+## Getting Started
 
 ### Prerequisites
 - Node.js 18+
@@ -109,140 +173,39 @@ Looking for a signal to build what people actually want. The marketplace connect
 ### Installation
 
 ```bash
-# Clone the repository
 git clone https://github.com/borgpad-labs/spark-it.git
 cd spark-it
 
-# Install dependencies
-npm install
-
-# Set up environment variables
-cp .env.example .env
-# Edit .env with your configuration
-
-# Start development server
+# Frontend
+cd frontend && npm install
+cp .env.example .env  # Edit with your config
 npm run dev
+
+# Smart contracts
+cd ../onchain && npm install
+anchor build
+anchor test
 ```
 
-### Environment Variables
-
-```bash
-# Solana
-VITE_RPC_URL=https://api.mainnet-beta.solana.com
-VITE_NETWORK=mainnet
-
-# Cloudflare
-CLOUDFLARE_API_TOKEN=your_token
-CLOUDFLARE_ACCOUNT_ID=your_account_id
-
-# Database
-DB_URL=your_d1_database_url
-
-# Authentication
-PRIVY_APP_ID=your_privy_app_id
-PRIVY_APP_SECRET=your_privy_app_secret
-```
-
-## 📊 Key Features
-
-### 🎯 **Idea Validation**
-Test your concepts with our community before investing time and resources.
-
-### 💰 **Decentralized Funding**
-Raise capital through community-driven DAOs and token launches.
-
-### 🤝 **Builder Marketplace**
-Connect with skilled developers, designers, and specialists.
-
-### 📊 **Real-time Trading**
-Trade project tokens and participate in the success of ideas.
-
-### 🏛️ **DAO Governance**
-Democratic decision-making for project direction and funding.
-
-### 🔒 **Secure & Transparent**
-Built on Solana with full transparency and security.
-
-## 🔧 Development
-
-### Project Structure
-```
-spark-it/
-├── frontend/           # React frontend application
-├── onchain/           # Solana smart contracts
-├── workers/           # Cloudflare Workers
-├── docs/             # Documentation
-└── scripts/          # Utility scripts
-```
-
-### Available Scripts
-
-```bash
-# Development
-npm run dev              # Start development server
-npm run build           # Build for production
-npm run lint            # Run ESLint
-npm run format          # Format code with Prettier
-
-# Blockchain
-npm run deploy:programs # Deploy smart contracts
-npm run test:onchain    # Run onchain tests
-
-# Database
-npm run db:migrate      # Run database migrations
-npm run db:seed         # Seed database with test data
-```
-
-## 🤝 Contributing
-
-We welcome contributions! Please see our [Contributing Guide](CONTRIBUTING.md) for details.
-
-### Development Workflow
-1. Fork the repository
-2. Create a feature branch (`git checkout -b feature/amazing-feature`)
-3. Commit your changes (`git commit -m 'Add amazing feature'`)
-4. Push to the branch (`git push origin feature/amazing-feature`)
-5. Open a Pull Request
-
-## 📈 Roadmap
-
-### Phase 1: Core Platform ✅
-- [x] Token creation and trading
-- [x] DAO governance system
-- [x] Builder marketplace
-- [x] Real-time market data
-
-### Phase 2: Enhanced Features 🚧
-- [ ] Advanced analytics dashboard
-- [ ] Mobile app development
-- [ ] Cross-chain integration
-- [ ] Advanced governance tools
-
-### Phase 3: Ecosystem Expansion 📋
-- [ ] Incubator program
-- [ ] Educational resources
-- [ ] Community tools
-- [ ] Enterprise partnerships
-
-## 📄 License
-
-This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
-
-## 🙏 Acknowledgments
-
-- **Solana Foundation** for the blockchain infrastructure
-- **Meteora** for the DEX and bonding curve technology
-- **Jupiter** for the swap aggregation
-- **Cloudflare** for the serverless infrastructure
-- **Privy** for the wallet authentication
-
-## 📞 Support
-
-- **Discord**: [Join our community](https://discord.gg/spark-it)
-- **Twitter**: [@spark_it](https://twitter.com/spark_it)
-- **Email**: hello@spark-it.com
-- **Documentation**: [docs.spark-it.com](https://docs.spark-it.com)
+See [`frontend/wrangler.toml`](frontend/wrangler.toml) for the full list of required environment variables.
 
 ---
 
-**Made with ⚡ by the Spark community**
+## Roadmap
+
+- First community-funded hackathon completing as you review this — our end-to-end Proof of Concept
+- Iterate: ship more ideas, run more hackathons, refine futarchy-based builder selection
+- DEX partnership for Ownership Coin liquidity (in discussions with several)
+- Discussions with stablecoin issuers to replace USDC
+- Long-term: hackathons as e-sports — competitive builder sport
+- Expanding into robotics
+
+---
+
+## License
+
+This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
+
+---
+
+**Made with Spark by Mathis, Ewan & Emere**
