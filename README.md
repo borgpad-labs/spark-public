@@ -22,7 +22,7 @@
 
 **Links:** [X](https://x.com/sparkdotfun) | [Telegram](https://t.me/sparkdotfun) | [Documentation](https://justspark.notion.site/spark-doc-public)
 
-**Team:** Mathis (Founder/Strategy) | Ewan (CTO/Solana) | Emere (Marketing/Community)
+**Team:** Mathis (Founder/Strategy) | Ewan (CTO/Solana) | Emre (Marketing/Community)
 
 **Contact:** @mathis_btc (Telegram)
 
